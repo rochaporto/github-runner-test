@@ -13,4 +13,6 @@ jobs:
     container: mooseontehloose/gpuburn:v1.0.0
     steps:
       - name: gpuburn
-        run: ./gpu_burn 60
+        run: |
+          nvidia-smi
+          ./gpu_burn 60
