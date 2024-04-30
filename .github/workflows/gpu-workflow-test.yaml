@@ -7,5 +7,6 @@ jobs:
     runs-on: arc-rochaporto
     container: mooseontehloose/gpuburn
     steps:
-    - run: |
-      ls /cvmfs/atlas.cern.ch
+      - name: ls cvmfs
+        run: |
+          ls /cvmfs/atlas.cern.ch
