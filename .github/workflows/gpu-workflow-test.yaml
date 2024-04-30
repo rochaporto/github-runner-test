@@ -1,0 +1,10 @@
+name: gpu-workflow-test
+on:
+  workflow_dispatch:
+
+jobs:
+  gpu-workflow-test:
+    runs-on: arc-rochaporto
+    container: mooseontehloose/gpuburn
+    steps:
+    - run: echo "test job for gpu workloads"
