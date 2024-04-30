@@ -1,11 +1,10 @@
-name: gpu-workflow-test
+name: self-hosted-workflow
 on:
   workflow_dispatch:
 
 jobs:
   gpu-workflow-test:
     runs-on: arc-rochaporto
-    container: mooseontehloose/gpuburn
     steps:
       - name: ls cvmfs
         run: |
