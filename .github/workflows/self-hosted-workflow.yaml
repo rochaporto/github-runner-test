@@ -3,8 +3,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  gpu-workflow-test:
+  test-cvmfs:
     runs-on: arc-rochaporto
     steps:
       - name: test cvmfs
         run: ls /cvmfs/atlas.cern.ch/repo
+  test-gpu:
+    runs-on: arc-rochaporto-gpu
+    container: mooseontehloose/gpuburn:v1.0.0
+    steps:
+      - name: gpuburn
+        run: ./gpu_burn 60
