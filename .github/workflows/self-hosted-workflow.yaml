@@ -6,6 +6,5 @@ jobs:
   gpu-workflow-test:
     runs-on: arc-rochaporto
     steps:
-      - name: ls cvmfs
-        run: |
-          ls /cvmfs/atlas.cern.ch
+      - name: test cvmfs
+        run: ls /cvmfs/atlas.cern.ch/repo
