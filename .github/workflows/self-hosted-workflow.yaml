@@ -10,7 +10,7 @@ jobs:
         run: ls /cvmfs/atlas.cern.ch/repo
   test-gpu:
     runs-on: arc-rochaporto-gpu
-    container: mooseontehloose/gpuburn:v1.0.0
+    container: rochaporto/gpu_burn
     steps:
       - name: gpuburn
         run: |
