@@ -10,9 +10,9 @@ jobs:
         run: ls /cvmfs/atlas.cern.ch/repo
   test-gpu:
     runs-on: arc-rochaporto-gpu
-    container: rochaporto/gpu_burn
+    container: registry.cern.ch/docker.io/rochaporto/gpu_burn
     steps:
       - name: gpuburn
         run: |
           nvidia-smi
-          ./gpu_burn 60
+          /app/gpu_burn 60
