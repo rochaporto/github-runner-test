@@ -4,12 +4,12 @@ on:
 
 jobs:
   test-cvmfs:
-    runs-on: arc-rochaporto
+    runs-on: kops-github-arc-scale-set-ngt
     steps:
       - name: test cvmfs
         run: ls /cvmfs/atlas.cern.ch/repo
   test-gpu:
-    runs-on: arc-rochaporto-gpu
+    runs-on: kops-github-arc-scale-set-ngt-gpu
     container: registry.cern.ch/docker.io/rochaporto/gpu_burn
     steps:
       - name: nvidia-smi
