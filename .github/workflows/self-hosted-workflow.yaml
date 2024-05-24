@@ -5,6 +5,7 @@ on:
 jobs:
   test-cvmfs:
     runs-on: kops-github-arc-scale-set-ngt
+    container: registry.cern.ch/docker.io/library/ubuntu:22.04
     steps:
       - name: test cvmfs
         run: ls /cvmfs/atlas.cern.ch/repo
