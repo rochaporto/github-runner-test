@@ -4,13 +4,13 @@ on:
 
 jobs:
   test-cvmfs:
-    runs-on: ngt
+    runs-on: validation
     container: registry.cern.ch/docker.io/library/ubuntu:22.04
     steps:
       - name: test cvmfs
         run: sleep 60; ls /cvmfs/atlas.cern.ch/repo
   test-gpu:
-    runs-on: ngt-gpu
+    runs-on: validation-gpu
     container: registry.cern.ch/docker.io/rochaporto/gpu_burn
     steps:
       - name: nvidia-smi
