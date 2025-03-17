@@ -8,7 +8,7 @@ jobs:
     container: registry.cern.ch/docker.io/library/ubuntu:22.04
     steps:
       - name: test cvmfs
-        run: ls /cvmfs/atlas.cern.ch/repo
+        run: sleep 60; ls /cvmfs/atlas.cern.ch/repo
   test-gpu:
     runs-on: ngt-gpu
     container: registry.cern.ch/docker.io/rochaporto/gpu_burn
